@@ -36,6 +36,20 @@ body{
     background-color: var(background-color);
 }
 
+footer{
+  color: var(--text-color-light);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 14px;
+}
+
+.center{
+  display: block;
+  text-align: center;
+}
+
+
 .letter-n{
   border-radius: 12px;
 }
@@ -73,10 +87,11 @@ body{
 } */
 
 .button-group{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    width: 34%;
+    display: inline;
+    /* flex-direction: row; */
+    /* justify-content:space-between; */
+    /* width: 34%; */
+    /* padding-right: 20px; */
 }
 .letter-n{
   height: 80px;
@@ -85,11 +100,13 @@ body{
 
   .button{
     margin-top: 40px;
-    padding: 16px 12px 16px 12px;
+    margin-right: 10px;
+    padding: 16px 16px 16px 16px;
     border: 1px black solid;
     width: fit-content;
     font-family: 'Public Sans', sans-serif;
     font-size: 14px;
+    display: inline-block;
   }
 
 
@@ -124,36 +141,38 @@ body{
   }
 
 .projects{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width:fit-content;
-    height: fit-content;
-    padding-left:20%;
-    padding-right: 20%;
-    padding-top: 5%;
-    background-color: aqua;
+  max-width: 1124px;
+  margin: auto;
+  display: block;
+  align-items: start;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* width:fit-content; */
+    /* height: fit-content; */
+    /* padding-left:20%; */
+    /* padding-right: 20%; */
+    /* padding-top: 5%; */
+    /* background-color: aqua; */
 }
 
 .project-card{
-    align-items: top;
-    width: 33%;
+    vertical-align: top;
+    width: 500px;
+    display: inline-block;
     height: fit-content;
     /* Will this cause varying heights for cards? */
-    background-color: #f1f1f1;
-    padding: 20px;
-
-    
+    padding: 30px;
   }
 
   .project-image{
     position: relative;
     height: auto;
     width: 100%;
-    margin: auto;
+    margin: 0 0 -12px 0;
     display: block;
-    border-radius: 5%;
+    border-radius: 20px;
     box-shadow: 0px 4px 16px 0px rgba(144, 132, 209, 0.2);
     box-shadow: 0px 4px 16px 0px rgba(144, 132, 209, 0.2);
 
@@ -166,7 +185,7 @@ body{
     width: fit-content;
     padding-top: 10%;
     font-family: 'Anek Devanagari', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 135%;
   }
 
@@ -176,11 +195,10 @@ body{
     text-align: left;
     width: fit-content;
     height: fit-content;
-    padding-top: 3%;
+    padding-top: px;
     font-family: 'Public Sans', sans-serif;
-    font-size: 14px;
     color: #696969;
-    line-height: 135%;
+    line-height: 170%;
   }
 
   @keyframes fadeInDown {

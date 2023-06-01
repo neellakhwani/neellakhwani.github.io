@@ -30,6 +30,11 @@ body {
 	flex-direction: column
 }
 
+.center{
+    display: inline;
+    text-align: center;
+}
+
 .tag {
 	font-size: 11px;
 	color: var(--accent-color-dark);
