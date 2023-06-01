@@ -1,10 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
-body{
-    background-color: #ffffff;
+:root {
+	--base-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	--title-font-family: Besley;
+	--subtitle-font-family: "IBM Plex Serif";
+	--background-color: #f8f8f8;
+	--foreground-color: #000000;
+	--text-color-dark: #000;
+	--text-color: #555;
+	--text-color-light: #999;
+	--accent-color-dark: hsl(258, 95%, 25%);
+	--accent-color:  #f96483;
+	--accent-color-light: hsla(258, 100%, 75%, 0.12);
+	--overlay-color: rgba(255, 255, 255, .8);  
+	--overlay-edge-color: rgba(0, 0, 0, .08)
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #0c0b1c;
+		--foreground-color: rgba(0, 0, 0, 0.3);
+		--text-color-dark: rgba(255, 255, 255, 1);
+		--text-color: rgba(255, 255, 255, .85);
+		--text-color-light: rgba(255, 255, 255, .7);
+		--accent-color-dark: #b91d1d;
+		--accent-color: #ff4343;
+		--accent-color-light: #ff78781a;
+		--overlay-color: rgba(0, 0, 0, .2);
+		--overlay-edge-color: rgba(255, 255, 255, .2)
+	}
+}
+
+body{
+    background-color: var(background-color);
+}
+
+.letter-n{
+  border-radius: 12px;
+}
 
 .flex-container{
     display: flex;
@@ -70,11 +104,23 @@ body{
   }
 
   .neel-photo{
-    position: relative;
-    height: 60%;
-    width: auto;
+    position: absolute;
+    top: 10%;
+    height: 60vh;
+    width: 45vh;
     margin: auto;
     display: block;
+    box-shadow: 12px 12px 0px 0px var(--accent-color);
+    -webkit-box-shadow: 12px 12px 0px 0px var(--accent-color);
+    -moz-box-shadow: 12px 12px 0px 0px var(--accent-color);
+    transition: .2s ease-in-out;
+  }
+
+  .neel-photo:hover{
+    transform: translate(-12px, -12px);
+    box-shadow: -12px -12px 0px 0px var(--accent-color);
+    -webkit-box-shadow: -12px -12px 0px 0px var(--accent-color);
+    -moz-box-shadow: -12px -12px 0px 0px var(--accent-color);
   }
 
 .projects{
@@ -136,6 +182,31 @@ body{
     color: #696969;
     line-height: 135%;
   }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px)
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+  
+  .animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+  }
+
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;  
+  }
+
 
 
 /* Mobile */
