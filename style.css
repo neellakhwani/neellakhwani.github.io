@@ -238,6 +238,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 .projects{
   max-width: 1124px;
   margin: auto;
+  padding-top: 20px;
   display: block;
   align-items: start;
   /* display: flex; */
@@ -449,4 +450,9 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
       footer{
         margin: 12px 0 12px 0;
       }
+      h1{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 48px;
+      }'
   }
