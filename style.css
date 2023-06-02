@@ -5,9 +5,9 @@
 	--base-font-family: "Public Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 	--title-font-family: "Anek Devanagari", sans-serif;
 
-  --anim-duration-short: 0.3s;
-  --anim-duration-medium: 0.6s;
-  --anim-duration-long: 0.9s;
+  --anim-duration-short: 0.2s;
+  --anim-duration-medium: 0.4s;
+  --anim-duration-long: 0.6s;
 
 	--background-color: #f8f8f8;
 	--foreground-color: #000000;
@@ -18,6 +18,12 @@
 
 	--primary-color:  #f96483;
 	--secondary-color: #770dff;
+
+  --authcenter: #FF7878;
+  --cipher: #770CFF;
+  --mindhouse: #FF4343;
+  --forestika: #12ff54;
+  --intercourses: #FFD700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -200,6 +206,10 @@ h5{
     -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
   }
 
+  .rotate-right-onhover, .rotate-left-onhover{
+    transition: var(--anim-duration-short) ease-out;
+  }
+
   .rotate-right-onhover:hover{
     transform: rotate(3deg);
   }
@@ -234,6 +244,28 @@ h5{
     padding: 30px;
   }
 
+
+
+.project-card:hover .authcenter{
+  color: var(--authcenter) !important;
+}
+
+.project-card:hover .cipher{
+  color: var(--cipher) !important;
+}
+
+.project-card:hover .mindhouse{
+  color: var(--mindhouse) !important;
+}
+
+.project-card:hover .forestika{
+  color: var(--forestika) !important;
+}
+
+.project-card:hover .intercourses{
+  color: var(--intercourses) !important;
+}
+
   .project-image{
     position: relative;
     height: auto;
@@ -243,7 +275,6 @@ h5{
     border-radius: 20px;
     box-shadow: 0px 4px 16px 0px rgba(144, 132, 209, 0.2);
     box-shadow: 0px 4px 16px 0px rgba(144, 132, 209, 0.2);
-
   }
 
   .project-title{
@@ -255,6 +286,7 @@ h5{
     font-family: var(--title-font-family);
     font-size: 24px;
     line-height: 135%;
+    transition: ease-in-out var(--anim-duration-short);
   }
 
   .project-description{
