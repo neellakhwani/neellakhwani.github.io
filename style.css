@@ -101,24 +101,24 @@ footer{
     font-size: 20px;
     font-weight: 600;
     text-align: left;
-    width: fit-content;
+    width: auto;
   }
 
   .neel-photo{
     width: 450px;
     margin: auto;
     display: inline;
-    box-shadow: 12px 12px 0px 0px var(--primary-color);
     -webkit-box-shadow: 12px 12px 0px 0px var(--primary-color);
     -moz-box-shadow: 12px 12px 0px 0px var(--primary-color);
+    box-shadow: 12px 12px 0px 0px var(--primary-color);
     transition: .2s ease-in-out;
   }
 
   .neel-photo:hover{
     transform: translate(-12px, -12px);
-    box-shadow: -12px -12px 0px 0px var(--primary-color);
     -webkit-box-shadow: -12px -12px 0px 0px var(--primary-color);
     -moz-box-shadow: -12px -12px 0px 0px var(--primary-color);
+    box-shadow: -12px -12px 0px 0px var(--primary-color);
   }
 
 h1, h2, h3, h4, h5{
@@ -132,7 +132,7 @@ h1{
   line-height: 48px;
 }
 
-h2{
+/* h2{
 
 }
 
@@ -146,7 +146,7 @@ h4{
 
 h5{
 
-}
+} */
 
 .button-group{
     display: inline;
@@ -175,15 +175,15 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     margin-right: 24px;
     padding: 16px 20px;
     border: 1px var(--btn-outline-color) solid;
-    width: fit-content;
     font-size: 16px;
     display: inline-block;
     text-decoration: none;
     transition: var(--anim-duration-short) ease-in-out;
 
-    box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
     -webkit-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
     -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
+    box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
+
   }
 
   .button:hover{
@@ -192,9 +192,10 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     background-color: var(--btn-hover-color);
     color: white !important;
 
-    box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
     -webkit-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
     -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
+    box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
+
   }
 
   .rotate-right-onhover, .rotate-left-onhover{
@@ -230,7 +231,6 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     vertical-align: top;
     width: 500px;
     display: inline-block;
-    height: fit-content;
     /* Will this cause varying heights for cards? */
     padding: 30px;
   }
@@ -272,7 +272,6 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     font-size: 20px;
     font-weight: 600;
     text-align: left;
-    width: fit-content;
     padding-top: 10%;
     font-family: var(--title-font-family);
     font-size: 24px;
@@ -283,11 +282,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
   .project-description{
     font-size: 16px;
     font-weight: 400;
-    text-align: left;
-    width: fit-content;
-    height: fit-content;
-    padding-top: px;
-    font-family: 
+    text-align: left; 
     color: #696969;
     line-height: 170%;
   }
