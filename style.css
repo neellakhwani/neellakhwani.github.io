@@ -42,6 +42,14 @@ body{
     line-height: 1.5;
 }
 
+.text-color-light{
+    color: var(--text-color-light);
+}
+
+.text-color-dark{
+    color: var(--text-color-dark);
+} 
+
 .text-color-primary{
     color: var(--primary-color);
 }
@@ -155,19 +163,50 @@ h5{
   width: auto;
 }
 
+:root {
+  /* use these to adjust button hover effect. Button outline is negative of thickness you want. */
+  --btn-offset-x: 10px;
+  --btn-offset-y: 10px;
+  --btn-outline: -1px; 
+  --btn-outline-color: black;
+  --btn-hover-color: var(--secondary-color);
+}
+
   .button{
     margin-top: 40px;
-    margin-right: 10px;
-    padding: 16px 16px 16px 16px;
-    border: 1px black solid;
+    margin-right: 24px;
+    padding: 16px 20px;
+    border: 1px var(--btn-outline-color) solid;
     width: fit-content;
     font-family: 'Public Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     display: inline-block;
+    text-decoration: none;
+    transition: var(--anim-duration-short) ease-in-out;
+
+    box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
+    -webkit-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
+    -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
   }
 
+  .button:hover{
+    border-radius: 10px;
+    border: 1px var(--btn-hover-color) solid;
+    background-color: var(--btn-hover-color);
+    color: white;
 
+    box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
+    -webkit-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
+    -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
+  }
 
+  .rotate-right-onhover:hover{
+    transform: rotate(3deg);
+  }
+
+  .rotate-left-onhover:hover{
+    transform: rotate(-3deg);
+  }
 
 .projects{
   max-width: 1124px;
