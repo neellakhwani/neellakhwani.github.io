@@ -344,9 +344,9 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     .flex-container{
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        max-width: 100%;
+        overflow-x: hidden;
         align-self: center;
-        display: none;
       }
 
       .intro{
