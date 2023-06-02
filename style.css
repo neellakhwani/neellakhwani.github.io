@@ -351,6 +351,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
         flex-direction: column;
         width: 100vw;
         align-self: center;
+        display: none;
       }
 
       .intro{
