@@ -312,6 +312,31 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
       transform: translateY(0)
     }
   }
+
+  .delay-1{
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s
+  }
+
+  .delay-2{
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s
+  }
+
+  .delay-3{
+    -webkit-animation-delay: .45s;
+    animation-delay: .45s
+  }
+
+  .delay-4{
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s
+  }
+
+  .delay-5{
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s
+  }
   
   .animated {
     -webkit-animation-duration: var(--anim-duration-medium);
