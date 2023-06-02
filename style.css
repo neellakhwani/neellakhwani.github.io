@@ -39,6 +39,7 @@ body{
     background-color: var(--background-color);
     font-family: var(--base-font-family);
     color: var(--text-color);
+    line-height: 1.5;
 }
 
 .text-color-primary{
@@ -114,11 +115,13 @@ footer{
 
 h1, h2, h3, h4, h5{
     font-family: var(--title-font-family);
+    margin: 0;
 }
 
 h1{
   font-weight: 700;
   font-size: 40px;
+  line-height: 48px;
 }
 
 h2{
