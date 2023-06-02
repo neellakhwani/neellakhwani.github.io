@@ -2,19 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 :root {
-	--base-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	--title-font-family: Besley;
-	--subtitle-font-family: "IBM Plex Serif";
+	--base-font-family: "Public Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+	--title-font-family: "Anek Devanagari", sans-serif;
+
+  --anim-duration-short: 0.3s;
+  --anim-duration-medium: 0.6s;
+  --anim-duration-long: 0.9s;
+
 	--background-color: #f8f8f8;
 	--foreground-color: #000000;
+
 	--text-color-dark: #000;
-	--text-color: #555;
+	--text-color:rgb(60, 60, 60);
 	--text-color-light: #999;
-	--accent-color-dark: hsl(258, 95%, 25%);
-	--accent-color:  #f96483;
-	--accent-color-light: hsla(258, 100%, 75%, 0.12);
-	--overlay-color: rgba(255, 255, 255, .8);  
-	--overlay-edge-color: rgba(0, 0, 0, .08)
+
+	--primary-color:  #f96483;
+	--secondary-color: #770dff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,16 +27,26 @@
 		--text-color-dark: rgba(255, 255, 255, 1);
 		--text-color: rgba(255, 255, 255, .85);
 		--text-color-light: rgba(255, 255, 255, .7);
-		--accent-color-dark: #b91d1d;
-		--accent-color: #ff4343;
-		--accent-color-light: #ff78781a;
+		--primary-color-dark: #b91d1d;
+		--primary-color: #ff4343;
+		--primary-color-light: #ff78781a;
 		--overlay-color: rgba(0, 0, 0, .2);
 		--overlay-edge-color: rgba(255, 255, 255, .2)
 	}
 }
 
 body{
-    background-color: var(background-color);
+    background-color: var(--background-color);
+    font-family: var(--base-font-family);
+    color: var(--text-color);
+}
+
+.text-color-primary{
+    color: var(--primary-color);
+}
+
+.text-color-secondary{
+    color: var(--secondary-color);
 }
 
 footer{
@@ -52,21 +65,23 @@ footer{
 
 .letter-n{
   border-radius: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .flex-container{
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 80vh;
+    width: 1124px;
+    margin: auto;
   }
 
   .intro{
-    width: 50%;
+    width: 500px;
     padding: 20px;
     justify-content: center;
     align-self: center;
-    margin-left: 80px;
+    margin-left: 20px;
     font-family: 'Public Sans', sans-serif;
     font-size: 14px;
     line-height: 120%;
@@ -80,11 +95,47 @@ footer{
     /* background-color: #b91d1d; */
   }
 
-.h1{
-    font-family: 'Anek Devanagari', sans-serif;
-    font-size: 40px;
+  .neel-photo{
+    width: 450px;
+    margin: auto;
+    display: inline;
+    box-shadow: 12px 12px 0px 0px var(--primary-color);
+    -webkit-box-shadow: 12px 12px 0px 0px var(--primary-color);
+    -moz-box-shadow: 12px 12px 0px 0px var(--primary-color);
+    transition: .2s ease-in-out;
+  }
+
+  .neel-photo:hover{
+    transform: translate(-12px, -12px);
+    box-shadow: -12px -12px 0px 0px var(--primary-color);
+    -webkit-box-shadow: -12px -12px 0px 0px var(--primary-color);
+    -moz-box-shadow: -12px -12px 0px 0px var(--primary-color);
+  }
+
+h1, h2, h3, h4, h5{
+    font-family: var(--title-font-family);
 }
 
+h1{
+  font-weight: 700;
+  font-size: 40px;
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
 /* .name{
     color: #770CFF;
 } */
@@ -113,52 +164,23 @@ footer{
   }
 
 
-  .intro-image{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    height: 100vh;
-    width: 50%;
-    /* background-color: aqua; */
-    margin-right: 80px;
-  }
 
-  .neel-photo{
-    position: relative;
-    /* top: 10%; */
-    align-self: center;
-    height: 60vh;
-    width: 45vh;
-    margin: auto;
-    display: block;
-    box-shadow: 12px 12px 0px 0px var(--accent-color);
-    -webkit-box-shadow: 12px 12px 0px 0px var(--accent-color);
-    -moz-box-shadow: 12px 12px 0px 0px var(--accent-color);
-    transition: .2s ease-in-out;
-  }
-
-  .neel-photo:hover{
-    transform: translate(-12px, -12px);
-    box-shadow: -12px -12px 0px 0px var(--accent-color);
-    -webkit-box-shadow: -12px -12px 0px 0px var(--accent-color);
-    -moz-box-shadow: -12px -12px 0px 0px var(--accent-color);
-  }
 
 .projects{
   max-width: 1124px;
   margin: auto;
   display: block;
   align-items: start;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    /* width:fit-content; */
-    /* height: fit-content; */
-    /* padding-left:20%; */
-    /* padding-right: 20%; */
-    /* padding-top: 5%; */
-    /* background-color: aqua; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* width:fit-content; */
+  /* height: fit-content; */
+  /* padding-left:20%; */
+  /* padding-right: 20%; */
+  /* padding-top: 5%; */
+  /* background-color: aqua; */
 }
 
 .project-card{
@@ -188,7 +210,7 @@ footer{
     text-align: left;
     width: fit-content;
     padding-top: 10%;
-    font-family: 'Anek Devanagari', sans-serif;
+    font-family: var(--title-font-family);
     font-size: 24px;
     line-height: 135%;
   }
@@ -200,7 +222,7 @@ footer{
     width: fit-content;
     height: fit-content;
     padding-top: px;
-    font-family: 'Public Sans', sans-serif;
+    font-family: 
     color: #696969;
     line-height: 170%;
   }
@@ -218,8 +240,8 @@ footer{
   }
   
   .animated {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
+    -webkit-animation-duration: var(--anim-duration-medium);
+    animation-duration: var(--anim-duration-medium);
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both
   }
