@@ -19,11 +19,11 @@
 	--primary-color:  #f96483;
 	--secondary-color: #770dff;
 
-  --authcenter: #FF7878;
-  --cipher: #770CFF;
-  --mindhouse: #FF4343;
-  --forestika: #12ff54;
-  --intercourses: #FFD700;
+  --authcenter: #5370EE;
+  --cipher: #A6577E;
+  --mindhouse: #9083D1;
+  --forestika: #FE6B86;
+  --intercourses: #E87CC9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,7 +82,7 @@ footer{
 .flex-container{
     display: flex;
     flex-direction: row;
-    height: 80vh;
+    height: 100vh;
     width: 1124px;
     margin: auto;
   }
