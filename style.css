@@ -5,7 +5,7 @@
 	--base-font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 	--title-font-family: "Anek Devanagari", sans-serif;
 
-  --anim-easing:cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  --anim-easing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
   --anim-duration-short: 0.3s;
   --anim-duration-medium: 0.4s;
@@ -353,7 +353,10 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     animation-name: fadeInDown;  
   }
 
-
+  .fadeInDownImg{
+    -webkit-animation-name: fadeInDownImg;
+    animation-name: fadeInDownImg;  
+  }
 
 /* Mobile */
   @media only screen and (max-width: 768px) {
