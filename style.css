@@ -79,11 +79,17 @@ body{
 }
 
 .text-small{
-    font-size: .8em;
+    font-size: .65em;
+    padding-bottom: 48px;
 }
 
 .text-large{
-  font-size: 1.15em;
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.empty-space{
+  height:10px;
 }
 
 footer{
@@ -96,6 +102,7 @@ footer{
 .center{
   display: block;
   text-align: center;
+  padding-top: 12px;
 }
 
 
@@ -154,7 +161,7 @@ h1, h2, h3, h4, h5{
 h1{
   font-weight: 700;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 24px;
 }
 
 /* h2{
@@ -180,6 +187,7 @@ h5{
 .letter-n{
   height: 80px;
   width: auto;
+  margin-bottom: 44px;
 }
 
 :root {
@@ -196,7 +204,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 }
 
   .button{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-right: 24px;
     padding: 16px 20px;
     border: 1px var(--btn-outline-color) solid;
@@ -221,6 +229,11 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
     box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-hover-color);
 
+  }
+
+  .fa-regular{
+    font-size: 18px;
+    margin-right: 8px;
   }
 
   .rotate-right-onhover, .rotate-left-onhover{
@@ -259,11 +272,9 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     display: inline-block;
 /* <<<<<<< HEAD
     /* Will this cause varying heights for cards? */
-    padding: 30px 30px;
-======= */
+    /* padding: 30px 30px; */
     padding: 30px;
->>>>>>> 37739ef75dcc719d8c948599e091cf1f9b929ff2
-  }
+}
 
 
 
@@ -450,9 +461,10 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
       footer{
         margin: 12px 0 12px 0;
       }
+
       h1{
-        font-weight: 700;
+        font-weight: 600;
         font-size: 28px;
         line-height: 48px;
-      }'
+      }
   }
