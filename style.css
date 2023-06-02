@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;1,300&display=swap'); */
 
 :root {
-	--base-font-family: "Public Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+	--base-font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 	--title-font-family: "Anek Devanagari", sans-serif;
 
-  --anim-duration-short: 0.2s;
+  --anim-easing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+  --anim-duration-short: 0.3s;
   --anim-duration-medium: 0.4s;
   --anim-duration-long: 0.6s;
+
+  --card-bg: #ffffff;
 
 	--background-color: #f8f8f8;
 	--foreground-color: #000000;
 
-	--text-color-dark: #000;
-	--text-color:rgb(60, 60, 60);
-	--text-color-light: #999;
+	--text-color-dark: hsl(0, 0%, 0%);
+	--text-color:hsl(266, 10%, 24%);
+	--text-color-light: hsl(266, 13%, 44%);
 
 	--primary-color:  #f96483;
+  --secondary-color-dark: #370874;
 	--secondary-color: #770dff;
-
+  --secondary-color-pale: #f1e6ff;
   --authcenter: #5370EE;
   --cipher: #A6577E;
   --mindhouse: #9083D1;
@@ -28,21 +33,33 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background-color: hsl(266 100% 6% / 1);
+		--background-color: hsl(266 50% 8% / 1);
 		--foreground-color: rgba(0, 0, 0, 0.3);
 
-		--text-color-dark: rgba(255, 255, 255, 1);
-		--text-color: rgba(255, 255, 255, .85);
-		--text-color-light: rgba(255, 255, 255, .7);
+    --secondary-color-pale: #260058;
+
+    --card-bg: #ba94ff;
+
+		--text-color-dark: hsl(266, 0%, 100%);
+		--text-color: hsla(266, 10%, 80%, 0.85);
+		--text-color-light: hsla(266, 25%, 70%, 0.75);
 	}
 }
 
+html{
+  background-color: var(--secondary-color-pale);
+  margin: 0;
+}
+
 body{
-    background-color: var(--background-color);
+    background: linear-gradient(180deg, var(--secondary-color-pale) 0%, var(--background-color) 5%, var(--background-color) 95%, var(--secondary-color-pale) 100%);
     font-family: var(--base-font-family);
+    font-weight: 300;
     color: var(--text-color);
-    line-height: 1.5;
+    line-height: 1.2;
     margin: 0;
+    font-feature-settings: 'salt' on, 'ss01' on, 'ss02' on, 'ss06' on, 'ss07' on;
+
 }
 
 .text-color-light{
@@ -59,6 +76,14 @@ body{
 
 .text-color-secondary{
     color: var(--secondary-color);
+}
+
+.text-small{
+    font-size: .8em;
+}
+
+.text-large{
+  font-size: 1.15em;
 }
 
 footer{
@@ -94,7 +119,6 @@ footer{
     align-self: center;
     margin-left: 20px;
     font-size: 14px;
-    line-height: 120%;
   }
 
   .intro-text{
@@ -111,7 +135,7 @@ footer{
     -webkit-box-shadow: 12px 12px 0px 0px var(--primary-color);
     -moz-box-shadow: 12px 12px 0px 0px var(--primary-color);
     box-shadow: 12px 12px 0px 0px var(--primary-color);
-    transition: .2s ease-in-out;
+    transition: var(--anim-duration-long) var(--anim-easing);
   }
 
   .neel-photo:hover{
@@ -124,6 +148,7 @@ footer{
 h1, h2, h3, h4, h5{
     font-family: var(--title-font-family);
     margin: 0;
+    color: var(--text-color-dark);
 }
 
 h1{
@@ -178,7 +203,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     font-size: 16px;
     display: inline-block;
     text-decoration: none;
-    transition: var(--anim-duration-short) ease-in-out;
+    transition: var(--anim-duration-short) var(--anim-easing);
 
     -webkit-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
     -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
@@ -199,7 +224,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
   }
 
   .rotate-right-onhover, .rotate-left-onhover{
-    transition: var(--anim-duration-short) ease-out;
+    transition: var(--anim-duration-short) var(--anim-easing);
   }
 
   .rotate-right-onhover:hover{
@@ -231,8 +256,12 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     vertical-align: top;
     width: 500px;
     display: inline-block;
+/* <<<<<<< HEAD
     /* Will this cause varying heights for cards? */
     padding: 30px 30px;
+======= */
+    padding: 30px;
+>>>>>>> 37739ef75dcc719d8c948599e091cf1f9b929ff2
   }
 
 
@@ -269,6 +298,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
   }
 
   .project-title{
+    color: var(--text-color-dark);
     font-size: 20px;
     font-weight: 600;
     text-align: left;
@@ -276,26 +306,61 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     font-family: var(--title-font-family);
     font-size: 24px;
     line-height: 135%;
-    transition: ease-in-out var(--anim-duration-short);
+    transition: var(--anim-easing) var(--anim-duration-short);
   }
 
   .project-description{
     font-size: 16px;
     font-weight: 400;
     text-align: left; 
-    color: #696969;
+    color: var(--text-color);
     line-height: 170%;
   }
+
+  footer{
+    margin: 20px;
+  }
+
+  .footer-text{
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  .fa-brands{
+    transition: var(--anim-easing) var(--anim-duration-short);
+  }
+
+  .social-icon{
+    margin: 0 6px; 
+    background-color: var(--card-bg);
+    font-size: 24px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px 0px rgba(144, 132, 209, 0.2);
+    webkit-box-shadow: 0px 4px 16px 0px rgba(144, 132, 209, 0.2);
+  }
+
+  .social-icon:hover .fa-brands {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+
+  a:link.social-icon, a:visited.social-icon, a:active.social-icon {
+    color: var(--secondary-color-dark);
+  }
+
+
 
   @keyframes fadeInDown {
     0% {
       opacity: 0;
-      transform: translateY(-20px)
+      transform: translateY(-20px);
     }
-  
+
     100% {
       opacity: 1;
-      transform: translateY(0)
+      transform: translateY(0);
     }
   }
 
@@ -323,6 +388,11 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     -webkit-animation-delay: .75s;
     animation-delay: .75s
   }
+
+  .delay-6{
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s
+  }
   
   .animated {
     -webkit-animation-duration: var(--anim-duration-medium);
@@ -336,7 +406,10 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     animation-name: fadeInDown;  
   }
 
-
+  .fadeInDownImg{
+    -webkit-animation-name: fadeInDownImg;
+    animation-name: fadeInDownImg;  
+  }
 
 /* Mobile */
   @media only screen and (max-width: 768px) {
@@ -345,8 +418,8 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
         display: flex;
         flex-direction: column;
         max-width: 100%;
-        overflow-x: hidden;
         align-self: center;
+        height: auto;
       }
 
       .intro{
@@ -355,11 +428,25 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
 
       .neel-photo{
         width: 80%;
+        margin-top: 20px;
+        margin-bottom: 120px;
       }
 
       .project-card{
-        padding: 0;
+        padding: 12px 0;
         width: 90%;
         margin: 5%;
+      }
+
+      .project-text{
+        padding-left: 10px;
+      }
+
+      .letter-n{
+        margin-top: 20px;
+      }
+
+      footer{
+        margin: 12px 0 12px 0;
       }
   }
