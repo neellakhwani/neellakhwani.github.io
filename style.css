@@ -29,6 +29,9 @@
   --mindhouse: #9083D1;
   --forestika: #FE6B86;
   --intercourses: #E87CC9;
+
+  --btn-outline-color: var(--text-color-dark);
+  --btn-hover-color: var(--secondary-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +39,8 @@
 		--background-color: hsl(266 50% 8% / 1);
 		--foreground-color: rgba(0, 0, 0, 0.3);
 
+    --secondary-color-dark: #370874;
+    --secondary-color: #8930fe;
     --secondary-color-pale: #260058;
 
     --card-bg: #ba94ff;
@@ -43,6 +48,9 @@
 		--text-color-dark: hsl(266, 0%, 100%);
 		--text-color: hsla(266, 10%, 80%, 0.85);
 		--text-color-light: hsla(266, 25%, 70%, 0.75);
+
+    --btn-outline-color: var(--text-color-dark);
+    --btn-hover-color: var(--secondary-color);
 	}
 }
 
@@ -186,13 +194,11 @@ h5{
   /* use these to adjust button hover effect. Button outline is negative of thickness you want. */
   --btn-offset-x: 10px;
   --btn-offset-y: 10px;
-  --btn-outline: -1px; 
-  --btn-outline-color: var(--text-color-dark);
-  --btn-hover-color: var(--secondary-color);
+  --btn-outline: -1px;
 }
 
 a:link.button, a:visited.button, a:hover.button, a:active.button {
-  color: var(--text-color);
+  color: var(--text-color-dark);
 }
 
   .button{
@@ -204,7 +210,6 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     display: inline-block;
     text-decoration: none;
     transition: var(--anim-duration-short) var(--anim-easing);
-
     -webkit-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
     -moz-box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
     box-shadow: var(--btn-offset-x) var(--btn-offset-y) 0px var(--btn-outline) var(--background-color), var(--btn-offset-x) var(--btn-offset-y) 0px 0px var(--btn-outline-color);
