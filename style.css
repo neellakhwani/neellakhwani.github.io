@@ -232,7 +232,7 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     width: 500px;
     display: inline-block;
     /* Will this cause varying heights for cards? */
-    padding: 30px 0;
+    padding: 30px 30px;
   }
 
 
