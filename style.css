@@ -268,6 +268,10 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
     transform: rotate(-3deg);
   }
 
+.subtext{
+  margin-top: -10px;
+}
+
 .projects{
   max-width: 1124px;
   margin: auto;
