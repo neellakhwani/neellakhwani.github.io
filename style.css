@@ -89,6 +89,7 @@ body{
 .text-small{
     font-size: .65em;
     padding-bottom: 48px;
+    font-weight: 400;
 }
 
 .text-large{
@@ -501,5 +502,9 @@ a:link.button, a:visited.button, a:hover.button, a:active.button {
       .text-small{
         font-size: .70em;
         padding-bottom: 48px;
+    }
+
+    .subtext{
+      margin-top: -12px;
     }
   }
