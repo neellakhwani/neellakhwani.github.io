@@ -54,6 +54,11 @@
 	}
 }
 
+a{
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+
 html{
   background-color: var(--secondary-color-pale);
   margin: 0;
